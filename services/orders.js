@@ -13,9 +13,7 @@ class OrdersService {
       const quantity = data.orders.length;
       return quantity;
     } catch (error) {
-      response.json({
-        message: error.message,
-      })
+      throw new Error(error);
     }
   }
 }
