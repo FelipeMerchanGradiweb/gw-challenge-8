@@ -14,9 +14,7 @@ class UsersService {
       const quantity = data.customers.length;
       return quantity;
     } catch (error) {
-      response.json({
-        message: error.message,
-      })
+      throw new Error(error);
     }
   }
 }
